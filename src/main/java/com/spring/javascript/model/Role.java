@@ -1,8 +1,7 @@
 package com.spring.javascript.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 
@@ -11,7 +10,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Role {
+@AllArgsConstructor
+public class Role implements GrantedAuthority {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,8 +19,8 @@ public class Role {
     private String role;
 
 
-    public Role(String role) {
-        this.role = role;
-
+    @Override
+    public String getAuthority() {
+        return getRole();
     }
 }

@@ -12,7 +12,7 @@ public interface UserService {
     User getUserById(Long id);
     void saveUser(User user);
     void removeUser(Long id);
-    void updateUser(Long id, User user);
+    void updateUser(Long id,User user);
     User getUserByUserEmail(String email);
     User getUserByUserName(String userName);
 

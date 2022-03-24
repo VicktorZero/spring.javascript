@@ -38,9 +38,9 @@ public class UserDaoImpl implements UserDao {
     }
     @Transactional
     @Override
-    public void updateUser(Long id, User user) {
+    public void updateUser(Long id ,User user) {
         User userUpdateDb = getUserById(id);
-        userUpdateDb.setUserName(user.getUserName());
+        userUpdateDb.setUserName(user.getUsername());
         userUpdateDb.setFirstName(user.getFirstName());
         userUpdateDb.setLastName(user.getLastName());
         userUpdateDb.setAge(user.getAge());
