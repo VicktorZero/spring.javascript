@@ -10,7 +10,7 @@ function addNewUser() {
     }
 
 
-    fetch('http://localhost:8080/admin/new/', {
+    fetch('http://localhost:8080/admin/new', {
         method: 'POST',
         body: JSON.stringify({
             firstName: window.formNewUser.nFirstName.value,

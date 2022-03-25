@@ -11,7 +11,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("admin")
+@RequestMapping("/admin")
 public class AdminRestController {
 
     @Autowired
@@ -43,9 +43,9 @@ public class AdminRestController {
          return ResponseEntity.ok().body(user);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("delete/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable(value = "id") Long id) {
+    public void delete(@PathVariable("id") Long id) {
         userService.removeUser(id);
     }
 }

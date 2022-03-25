@@ -32,7 +32,7 @@ function getAllusers(){
                     '<button type="button" onclick="getModalDelete(' + user.id + ')" '
                     + 'class="btn btn-danger">Delete</button>';
 
-            })})
+            })});
 }
 
 
